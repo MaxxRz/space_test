@@ -1,0 +1,42 @@
+.crewOptions {
+   display: flex;
+   justify-content: space-between;
+   width: 50%;
+   min-width: 200px;
+   margin: 0 auto;
+   margin-bottom: 2.5rem;
+
+   button {
+      border: 0.75rem solid $greyColor;
+      border-radius: 50%;
+      transition: all 0.2s;
+
+      &:hover {
+         border-color: $greyLightColor;
+         scale: 1.2;
+      }
+   }
+
+   .crewActiv{
+      scale: 1.3;
+      border-color: $whiteColor;
+   }
+}
+
+.crewTitle {
+   padding-bottom: 1.5rem;
+   overflow: hidden;
+}
+.crewSubtitle {
+   font-size: 1.5rem;
+   color: $greyLightColor;
+   padding-bottom: 0.5rem;
+}
+
+.crewBio {
+   margin-bottom: 3rem;
+}
+
+.crewImage img {
+   width: 100%;
+}

@@ -1,0 +1,91 @@
+@import "utils/mixins";
+@import "utils/variables";
+
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   color: $whiteColor;
+   background-image: url(@/assets/images/backs/background-home-tablet.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   height: 100vh;
+
+   @include rwd_tablet {
+      background-color: pink;
+   }
+}
+ul {
+   list-style: none;
+   height: 100%;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+   height: auto;
+}
+p {
+   font-family: $fontText;
+   font-weight: 300;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
+   line-height: 1.8;
+}
+
+button {
+   background: none;
+   color: $whiteColor;
+   border: none;
+   cursor: pointer;
+}
+@import "components/base";
+@import "components/nav";
+
+.containerGrid {
+   display: grid;
+   width: auto;
+   grid-template-columns: minmax(0, auto);
+}
+
+@import "views/home";
+@import "views/destination";
+@import "views/crew";
+
+.change {
+   overflow: hidden;
+
+   [data-destiny] {
+      position: relative;
+      animation: changeAnimation 1.5s cubic-bezier(0.81, 0.13, 0.21, 0.93);
+   }
+}
+
+@keyframes changeAnimation {
+   0% {
+      left: 0;
+   }
+   30% {
+      opacity: 0;
+   }
+   54% {
+      left: -100%;
+   }
+   55% {
+      left: 100%;
+   }
+   70% {
+      opacity: 0;
+   }
+   80% {
+      opacity: 1;
+      left: 0;
+   }
+}

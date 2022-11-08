@@ -1,0 +1,52 @@
+
+.homeDescription{
+   text-align: center;
+}
+.homeText{
+   padding-top: 1.5rem;
+}
+
+
+.homeBall{
+   text-align: center;
+   margin-top: 5rem;
+}
+.spaceball{
+   margin: 0 auto;
+   background-color: $whiteColor;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   color: $blueColor;
+   letter-spacing: .2rem;
+   font-size: 1.1rem;
+   animation: moveBall 25s infinite linear alternate-reverse;
+   -webkit-box-shadow: inset 0px 0px 17px 6px rgba(196,196,196,0.59);
+-moz-box-shadow: inset 0px 0px 17px 6px rgba(196,196,196,0.59);
+box-shadow: inset 0px 0px 17px 6px rgba(196,196,196,0.59);
+}
+
+@keyframes moveBall {
+   10%{
+      transform: translate(1px, -3px);
+   }
+   25%{
+      transform: translate(-3px, 0px);
+   }
+   50%{
+      transform: translate(2px,4px);
+   }
+   75%{
+      transform: translate(3px,-4px);
+   }
+   90%{
+      transform: translate(-2px,3px);
+   }
+   100%{
+      transform: translate(0px, 0px);
+   }
+
+}

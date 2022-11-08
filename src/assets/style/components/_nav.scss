@@ -1,0 +1,86 @@
+nav{
+   position: sticky;
+   top: 0;
+   z-index: 9999;
+}
+
+.navTop{
+   padding: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   z-index: 9999;
+   position: relative;
+   
+   div{
+      
+      height: 2rem;
+      width: 2rem;
+   }
+   
+   .navBurger{
+      cursor: pointer;
+   }
+}
+
+
+.navContent{
+   position: absolute;
+   width: 100%;
+   padding-top: calc(2rem + 1.5rem * 2 );;
+   height: 100vh;
+   font-family: $fontSub;
+   text-transform: uppercase;
+   top: -100vh;
+   transition: top .5s;
+   z-index: 999;
+   background-color: $blackColor;
+}
+.navActiv{
+   top: 0;
+}
+.navBlock{
+   height: calc(100% / 4);
+   
+   color: $whiteColor;
+   
+   div{
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      letter-spacing: .25rem;;
+      transition: all .5s;
+      
+      &::before{
+         position: absolute;
+         content: "";
+         display: block;
+         height: 0%;
+         width: .35rem;
+         border-radius: 2px;
+         left: 0;
+         background-color: $whiteColor;
+         transition: height .5s;
+      }
+   }
+
+   div:hover{      
+      letter-spacing: .35rem;
+
+      &::before{
+         height: 100%;
+      }
+   }
+}
+
+.navIndex{
+   display: none;
+
+   @include rwd_tablet{
+      display: inline-block;
+   }
+}
+

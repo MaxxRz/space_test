@@ -1,0 +1,90 @@
+
+.destinationOptions{
+  margin-bottom: .5rem;
+  text-align: center;
+}
+.destinationOptions li{
+  display: inline-block; 
+  padding-right: 1rem;
+
+  &:last-child{
+    padding-right: 0;
+  }
+}
+.destinationOptions button, .destinyActiv{
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: .5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+   &::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    background-color: $whiteColor;
+    display: block;
+    height: 3px;
+    border-radius: 50px;
+    bottom: 0;
+    transition: width .2s;
+   }
+
+   &:hover::after{
+      width: 100%;
+   }
+}
+.destinationOptions .destinyActiv::after{
+  width: 100%;
+}
+// planet image
+.destinationImg img{
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  padding: 2rem 0;
+
+}
+// TITLE PLANETA 
+.destinationPlanet{
+  grid-area: 1;
+  padding-bottom: 1rem;
+  
+  h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $fontTitle;
+    font-size: 5rem;
+  }
+}
+
+.destinationInfo{
+  text-align: center;
+  transition: height .2s;
+}
+
+
+.destinationDatos{
+  border-top:1px solid $greyColor;
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+
+  div{
+    padding-bottom: 1rem;
+  }
+
+  span{
+    @extend .subtitle;
+    font-size: 1rem;
+    color: $greyLightColor;
+  }
+
+  p{
+    font-family: $fontTitle;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.25;    
+  }
+}

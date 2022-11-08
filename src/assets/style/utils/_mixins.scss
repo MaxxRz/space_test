@@ -1,0 +1,17 @@
+
+@mixin rwd_tablet(){
+   @media screen and ( min-width: 767px){
+      @content;
+   }
+}
+
+@mixin rwd_desktop(){
+   @media screen and ( min-width: 1024px) {
+      @content;
+   }
+}
+
+
+@mixin change_Background($page){
+   background-image: url('background-' + #{page} + '-mobile.jpg');
+}
